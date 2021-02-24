@@ -1,0 +1,180 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherist;
+}
+
+input:-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block {
+  width: 300px;
+  height: 330px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+.text {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(227, 227, 227, 0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00000000", endColorstr="#a6e3e3e3",GradientType=0 );
+  height: 15%;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  color: #5f6b79;
+}
+
+.inputs {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+dl {
+  display: flex;
+  align-items: center;
+  flex: 25%;
+  border-bottom: 1px solid #dedede;
+}
+dl:last-child {
+  border-bottom: none;
+}
+
+.box {
+  margin: 0px 0px 0px 30px;
+}
+
+input {
+  position: absolute;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+}
+label div {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 3px solid #5f6b79;
+  border-radius: 50%;
+}
+
+span {
+  color: #5f6b79;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 10px 0px 0px 15px;
+}
+
+#prepare:checked ~ .prepare div,
+#assign:checked ~ .assign div,
+#be:checked ~ .be div,
+#start:checked ~ .start div {
+  border: 3px solid #3cc070;
+}
+#prepare:checked ~ .prepare span,
+#assign:checked ~ .assign span,
+#be:checked ~ .be span,
+#start:checked ~ .start span {
+  color: #3cc070;
+  position: relative;
+}
+#prepare:checked ~ .prepare span:before,
+#assign:checked ~ .assign span:before,
+#be:checked ~ .be span:before,
+#start:checked ~ .start span:before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #3cc070;
+  width: 100%;
+  margin-top: 8px;
+}
+#prepare:checked ~ .prepare span:after,
+#assign:checked ~ .assign span:after,
+#be:checked ~ .be span:after,
+#start:checked ~ .start span:after {
+  position: absolute;
+  content: "✔";
+  display: block;
+  margin: -22px 0px 0px -39px;
+  font-size: 25px;
+  color: #3cc070;
+}
